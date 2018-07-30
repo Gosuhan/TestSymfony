@@ -122,7 +122,7 @@ class AdvertController extends Controller
     // Reste de la méthode qu'on avait déjà écrit
     if ($request->isMethod('POST')) {
       $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
-      // Puis on redirige vers la page de visualisation de cettte annonce
+      // Puis on redirige vers la page de visualisation de cette annonce
       return $this->redirectToRoute('oc_platform_view', array('id' => $advert->getId()));
     }
     // Si on n'est pas en POST, alors on affiche le formulaire
